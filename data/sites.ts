@@ -1,0 +1,175 @@
+export interface Site {
+  name: string;
+  screenshot: string;
+  repo: string;
+  category: string;
+}
+
+export const categories = [
+  'All',
+  'Car',
+  'Exhibition',
+  'Portfolio',
+  'Metaverse',
+  'Room',
+  'E-Commerce',
+  'Game',
+  'Space',
+  'Other',
+  'Mobile Only'
+] as const;
+
+export type Category = typeof categories[number];
+
+export const sites: Site[] = [
+  // Car
+  { name: "Lamborghini", screenshot: "/screenshot/pack01-lamborghini.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/car/www.lamborghini.com", category: "Car" },
+  { name: "Toyota Gazoo Racing", screenshot: "/screenshot/toyotagazooracing.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/car/toyotagazooracing.com", category: "Car" },
+  { name: "Volkswagen Mexico", screenshot: "/screenshot/vw-com-mx.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/car/www.vw.com.mx", category: "Car" },
+  { name: "Gemini Experience", screenshot: "/screenshot/exp-gemini.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/car/exp-gemini.lusion.co", category: "Car" },
+  { name: "Renault Twingo", screenshot: "/screenshot/nouvelletwingo-renault.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack05/tree/main/car/www.experience-nouvelletwingo.renault.fr", category: "Car" },
+  { name: "Xiaomi SU7", screenshot: "/screenshot/mi-su7.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/car/mi-su7", category: "Car" },
+  { name: "Classics Garage", screenshot: "/screenshot/classics-garage.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack06/tree/main/car/www.classics-garage.com", category: "Car" },
+  { name: "Virtual Car Lab", screenshot: "/screenshot/labs-otherlife-xyz-virtualcar.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack06/tree/main/car/labs.otherlife.xyz", category: "Car" },
+
+  // Exhibition
+  { name: "Iconic Mints WSJ Barrons", screenshot: "/screenshot/iconicmintswsjbarrons.jpg", repo: "https://github.com/ezshine/AwesomeSites-iconicmints.wsjbarrons.com", category: "Exhibition" },
+  { name: "TJDI Exhibition 2022", screenshot: "/screenshot/tjdi-exhibition2022.jpg", repo: "https://github.com/ezshine/AwesomeSites-tjdi-exhibition", category: "Exhibition" },
+  { name: "Infinite Passerella", screenshot: "/screenshot/exp-infinite-passerella.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/exhibition/exp-infinite-passerella.lusion.co", category: "Exhibition" },
+  { name: "VR Showroom", screenshot: "/screenshot/vrshow-oss-dt-space.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack02/tree/main/car/vrshow-oss.dt-space.cn/showroom", category: "Exhibition" },
+  { name: "AF1 Hotel", screenshot: "/screenshot/af1hotel-koikreative.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/minisite/af1hotel.koikreative.com/", category: "Exhibition" },
+  { name: "A Number from the Ghost", screenshot: "/screenshot/anumberfromtheghost.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack05/tree/main/room/www.anumberfromtheghost.com/", category: "Exhibition" },
+
+  // Portfolio
+  { name: "Bruno Simon", screenshot: "/screenshot/bruno-simon.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/portfolio/bruno-simon.com", category: "Portfolio" },
+  { name: "David HCKH", screenshot: "/screenshot/david-hckh.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/portfolio/david-hckh.com", category: "Portfolio" },
+  { name: "Interview Ueno", screenshot: "/screenshot/interview-ueno.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/portfolio/interview.ueno.co", category: "Portfolio" },
+  { name: "Madbox", screenshot: "/screenshot/madbox-io.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/portfolio/madbox.io", category: "Portfolio" },
+  { name: "Quentin Hocde", screenshot: "/screenshot/quentinhocde.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/portfolio/quentinhocde.com", category: "Portfolio" },
+  { name: "Akino Kogomi", screenshot: "/screenshot/akinokogomi.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack03/tree/main/others/akinokogomi.vercel", category: "Portfolio" },
+  { name: "We Are Zizo", screenshot: "/screenshot/wearezizo.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack03/tree/main/portfolio/wearezizo.com", category: "Portfolio" },
+  { name: "Brett Williams", screenshot: "/screenshot/brettwilliams.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack03/tree/main/portfolio/www.brettwilliams.net", category: "Portfolio" },
+  { name: "HLE.io", screenshot: "/screenshot/hle-io.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/portfolio/hle.io", category: "Portfolio" },
+  { name: "Impossible Box", screenshot: "/screenshot/impossible-box.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/portfolio/impossible-box.web.app", category: "Portfolio" },
+  { name: "Luni App", screenshot: "/screenshot/luni-app.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/portfolio/www.luni-app", category: "Portfolio" },
+  { name: "Curious", screenshot: "/screenshot/curious.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/portfolio/curious.co", category: "Portfolio" },
+  { name: "Artisans d'Idees", screenshot: "/screenshot/artisansdidees.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/portfolio/www.artisansdidees.com", category: "Portfolio" },
+  { name: "Active Theory", screenshot: "/screenshot/activetheory.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/portfolio/logartis.info", category: "Portfolio" },
+  { name: "Logartis", screenshot: "/screenshot/logartis.info.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/portfolio/logartis.info", category: "Portfolio" },
+  { name: "Sector 32", screenshot: "/screenshot/sector32-net.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack06/tree/main/portfolio/www.sector32.net", category: "Portfolio" },
+  { name: "Story Sector 32", screenshot: "/screenshot/story-sector32-net.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack06/tree/main/portfolio/story.sector32.net", category: "Portfolio" },
+  { name: "Nanoshrine Interactive", screenshot: "/screenshot/nanoshrineinteractive.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack06/tree/main/portfolio/nanoshrineinteractive.com", category: "Portfolio" },
+  { name: "Utsubo", screenshot: "/screenshot/utsubocom.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack06/tree/main/portfolio/www.utsubo.com", category: "Portfolio" },
+
+  // Metaverse
+  { name: "Coastal World", screenshot: "/screenshot/coastalworld.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack03/tree/main/metaverse/coastalworld.com", category: "Metaverse" },
+  { name: "OPPO InnoDay 2021", screenshot: "/screenshot/oppoinno2021.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack03/tree/main/metaverse/oppo_innoday2021", category: "Metaverse" },
+  { name: "Douyin Carnival 2022", screenshot: "/screenshot/douyin-carnival-2022.jpg", repo: "https://github.com/ezshine/AwesomeSites-douyin_carnival_2022", category: "Metaverse" },
+  { name: "ICBC BJ Miniverse", screenshot: "/screenshot/icbc-bj-miniverse.jpg", repo: "https://github.com/ezshine/AwesomeSites-icbc-bj-metaverse", category: "Metaverse" },
+  { name: "Pop Mart Exhibition", screenshot: "/screenshot/popmart-exhibition.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack03/tree/main/metaverse/popmart2022", category: "Metaverse" },
+  { name: "Orion Adrian Red", screenshot: "/screenshot/orion-adrianred-com.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack06/tree/main/metaverse/orion.adrianred.com", category: "Metaverse" },
+  { name: "Samsy Ninja", screenshot: "/screenshot/samsy-ninja.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack06/tree/main/metaverse/samsy.ninja", category: "Metaverse" },
+
+  // Room
+  { name: "Adobe x Bowie", screenshot: "/screenshot/adobexbowie.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack02/tree/main/room/adobexbowie75.com", category: "Room" },
+  { name: "Little Workshop Showroom", screenshot: "/screenshot/showroom-littleworkshop.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/room/showroom.littleworkshop.fr", category: "Room" },
+  { name: "Hennessy House of Moves", screenshot: "/screenshot/hennessy-house-of-moves.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/room/hennessy-house-of-moves.hello-jury.com", category: "Room" },
+  { name: "AU Floor", screenshot: "/screenshot/au-floor.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/room/au-floor.vercel.app", category: "Room" },
+
+  // E-Commerce
+  { name: "WebXR Sneakers", screenshot: "/screenshot/webxr-sneakers.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/e-commerce/webxr-sneakers.lusion.co", category: "E-Commerce" },
+  { name: "MaxMara Bearing Gifts", screenshot: "/screenshot/maxmara-bearinggifts.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/e-commerce/maxmara-bearinggifts.betteringbrands.com", category: "E-Commerce" },
+  { name: "WebGI Jewelry", screenshot: "/screenshot/webgi-jewelry.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack02/tree/main/other/webgi-jewelry.vercel", category: "E-Commerce" },
+  { name: "Gleec", screenshot: "/screenshot/gleec.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/other/gleec.com", category: "E-Commerce" },
+  { name: "The Magical Pantry", screenshot: "/screenshot/themagicalpantry.jpg", repo: "https://github.com/ezshine/AwesomeSites-themagicalpantry.com", category: "E-Commerce" },
+  { name: "Fendi Baguette 25", screenshot: "/screenshot/baguette25.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/e-commerce/www.fendi.com", category: "E-Commerce" },
+  { name: "VR Seat", screenshot: "/screenshot/vrseat.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack02/tree/main/room/vrseat.vercel", category: "E-Commerce" },
+  { name: "L'Oreal Future of Beauty", screenshot: "/screenshot/futureofbeauty-loreal.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack03/tree/main/e-commerce/futureofbeauty.loreal.com", category: "E-Commerce" },
+  { name: "Panasonic Technology", screenshot: "/screenshot/technology-panasonic.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack03/tree/main/e-commerce/technology.panasonic.eu", category: "E-Commerce" },
+  { name: "The Perfume Shop", screenshot: "/screenshot/theperfumeshop.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/e-commerce/www.theperfumeshop.com", category: "E-Commerce" },
+  { name: "Indigo Hakusho 45R", screenshot: "/screenshot/indigo-hakusho.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack05/tree/main/e-commerce/45r.jp", category: "E-Commerce" },
+  { name: "Dolce & Gabbana Gift Finder", screenshot: "/screenshot/giftfinder-dolcegabbana.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack05/tree/main/e-commerce/giftfinder.dolcegabbana.com", category: "E-Commerce" },
+
+  // Game
+  { name: "Let's Play Ouigo", screenshot: "/screenshot/letsplay-ouigo.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack02/tree/main/game/letsplay.ouigo.com", category: "Game" },
+  { name: "Slow Roads", screenshot: "/screenshot/slowroads.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack02/tree/main/game/slowroads", category: "Game" },
+  { name: "NARS Play Your Power", screenshot: "/screenshot/playyourpowernarscosmetics.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack02/tree/main/game/playyourpower.narscosmetics.com", category: "Game" },
+  { name: "Evian True Source", screenshot: "/screenshot/truesource-evian.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack02/tree/main/game/truesource.evian.com", category: "Game" },
+  { name: "Microwaver 59", screenshot: "/screenshot/microwaver59.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/game/microwaver59.com", category: "Game" },
+  { name: "Gucci Beloved Bounce", screenshot: "/screenshot/guccilovedbounce.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/game/guccibelovedbounce.gucci.com", category: "Game" },
+  { name: "Foosball World Cup 18", screenshot: "/screenshot/foosballworldcup18.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/game/www.foosballworldcup18.com", category: "Game" },
+  { name: "Play GL", screenshot: "/screenshot/playgl.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/game/play.gl", category: "Game" },
+  { name: "Montblanc The Race", screenshot: "/screenshot/therace.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/game/therace.montblanclegend.com", category: "Game" },
+  { name: "MSI I Want It All", screenshot: "/screenshot/iwantitall.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/game/iwantitall.msi.com", category: "Game" },
+  { name: "Chocapic Nutri Game", screenshot: "/screenshot/chocapic-nutri-game.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/game/www.chocapic-nutri-game.fr", category: "Game" },
+  { name: "Kodinger Goy", screenshot: "/screenshot/kodingergoy.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/game/kodingergoy.arkivert.no", category: "Game" },
+  { name: "Zizo Party", screenshot: "/screenshot/zizoparty.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack03/tree/main/game/party.wearezizo.com", category: "Game" },
+  { name: "Colorful Night", screenshot: "/screenshot/colorfulnight-pha5e.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/game/colorfulnight.pha5e.com", category: "Game" },
+  { name: "Summer Afternoon", screenshot: "/screenshot/summerafternoon.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/game/summer-afternoon.vlucendo.com", category: "Game" },
+  { name: "Out of Doors", screenshot: "/screenshot/out-of-doors-lostmechanics.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/game/out-of-doors.lostmechanics.com", category: "Game" },
+  { name: "Cartier Fabulous Journey", screenshot: "/screenshot/thefabulouscartierjourney.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/game/thefabulouscartierjourney.cartier.com", category: "Game" },
+  { name: "Haunted Digital Panda", screenshot: "/screenshot/haunted-thedigitalpanda.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/game/haunted.thedigitalpanda.com", category: "Game" },
+  { name: "PCOL", screenshot: "/screenshot/pcol.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/game/pcol", category: "Game" },
+  { name: "VeeCon 2023", screenshot: "/screenshot/veecon2023game-veefriends.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/game/veecon2023game.veefriends.com", category: "Game" },
+  { name: "Estee Lauder ANR Cade", screenshot: "/screenshot/esteelauderanrcade.jpg", repo: "https://github.com/ezshine/AwesomeSites-esteelauderanrcade", category: "Game" },
+  { name: "Plume Game", screenshot: "/screenshot/plumegame.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack05/tree/main/game/plumegame.com", category: "Game" },
+  { name: "Going Home", screenshot: "/screenshot/goinghome-302chanwoo.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack05/tree/main/game/goinghome.302chanwoo.com", category: "Game" },
+  { name: "I Spy Heihei", screenshot: "/screenshot/ispy-heihei-resn.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack05/tree/main/game/ispy.heihei.resn.co", category: "Game" },
+  { name: "Short Trip", screenshot: "/screenshot/alexanderperrin-shorttrip.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack05/tree/main/game/alexanderperrin.com.au", category: "Game" },
+  { name: "Trolli Dark Escape", screenshot: "/screenshot/trollideliciouslydarkescape.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack05/tree/main/game/trollideliciouslydarkescape.com", category: "Game" },
+  { name: "Giga Game", screenshot: "/screenshot/giga-game.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack02/tree/main/game/giga.game", category: "Game" },
+  { name: "Equinox Space", screenshot: "/screenshot/equinox-space.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack06/tree/main/games/equinox.space", category: "Game" },
+  { name: "Choo Choo World", screenshot: "/screenshot/choochooworld.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/game/choochooworld.com", category: "Game" },
+  { name: "Pinball Cosmic Shelter", screenshot: "/screenshot/pinball-cosmicshelter-com.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack06/tree/main/games/pinball.cosmicshelter.com", category: "Game" },
+  { name: "Shopify BFCM", screenshot: "/screenshot/bfcm-shopify-com.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack06/tree/main/games/bfcm.shopify.com", category: "Game" },
+
+  // Space
+  { name: "Space Force", screenshot: "/screenshot/spaceforce.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/minisite/www.spaceforce.com", category: "Space" },
+  { name: "Roberts Space Industries", screenshot: "/screenshot/robertsspaceindustries-starmap.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/space/robertsspaceindustries.com", category: "Space" },
+  { name: "Leap for Mankind", screenshot: "/screenshot/leap-for-mankind.jpg", repo: "https://github.com/ezshine/AwesomeSites-leap-for-mankind.com", category: "Space" },
+  { name: "NASA Mars 2020", screenshot: "/screenshot/eyes-nasa-mars2020.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/space/eyes.nasa.gov", category: "Space" },
+  { name: "Sigma Software Labs", screenshot: "/screenshot/sigmasoftwarelabs.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack03/tree/main/others/sigmasoftwarelabs.com", category: "Space" },
+  { name: "SpaceX ISS Docking Simulator", screenshot: "/screenshot/issdockingsimulator.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack05/tree/main/space/iss-sim.spacex.com", category: "Space" },
+  { name: "Cocosmos", screenshot: "/screenshot/cocosmos-online.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack05/tree/main/space/cocosmos.online", category: "Space" },
+
+  // Other
+  { name: "My Little Storybook", screenshot: "/screenshot/expmylittlestorybook.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/game/exp-my-little-storybook.lusion.co", category: "Other" },
+  { name: "Turn of the Screw", screenshot: "/screenshot/turnofthescrewtrailer.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/other/turn-of-the-screw-trailer.s3.eu-west-2.amazonaws.com", category: "Other" },
+  { name: "Avatar Builder", screenshot: "/screenshot/avatarbuilder.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/other/avatarbuilder", category: "Other" },
+  { name: "Lucy Hardcastle Fifth Sense", screenshot: "/screenshot/lucyhardcastle-thefifthsense.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/other/lucyhardcastle-thefifthsense.i-d.co", category: "Other" },
+  { name: "Wildflower", screenshot: "/screenshot/windflower.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/other/wildflower.resn.co.nz", category: "Other" },
+  { name: "Atmos Leeroy", screenshot: "/screenshot/atmosleeroy.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/portfolio/atmos.leeroy.ca", category: "Other" },
+  { name: "Yellow World", screenshot: "/screenshot/yelloworld.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/other/yelloworld.pinkyellow.com", category: "Other" },
+  { name: "Blues-D", screenshot: "/screenshot/blues-d.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack01/tree/main/portfolio/www.blues-d.co.jp", category: "Other" },
+  { name: "LR Does Book", screenshot: "/screenshot/lr-doesbook.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack02/tree/main/other/lr.doesbook.kr/en", category: "Other" },
+  { name: "Persepolis Getty", screenshot: "/screenshot/persepolis-getty.jpg", repo: "https://github.com/ezshine/AwesomeSite-persepolis.getty.edu", category: "Other" },
+  { name: "DDD Dance Party", screenshot: "/screenshot/dddanceparty.jpg", repo: "https://github.com/ezshine/AwesomeSite-dddance.party", category: "Other" },
+  { name: "Media Facade Shiftlink", screenshot: "/screenshot/media-facade-shiftlink.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack02/tree/main/other/media-facade.shiftlink.tech", category: "Other" },
+  { name: "Design Next iPhone", screenshot: "/screenshot/design-next-iphone.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack02/tree/main/other/neal.fun%3Adesign-the-next-iphone", category: "Other" },
+  { name: "The Female Gaze", screenshot: "/screenshot/thefemalegaze.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack02/tree/main/other/www.thefemalegaze.art", category: "Other" },
+  { name: "The Pleasure Pursuit", screenshot: "/screenshot/thepleasurepursuit.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack02/tree/main/other/www.thepleasurepursuit.com", category: "Other" },
+  { name: "Cleo Show", screenshot: "/screenshot/cleoshow.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack03/tree/main/others/cleo.show", category: "Other" },
+  { name: "Rainforest Arkivert", screenshot: "/screenshot/rainforest-arkivert.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack03/tree/main/others/rainforest.arkivert.no", category: "Other" },
+  { name: "Hape.io", screenshot: "/screenshot/hape-io.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack03/tree/main/others/www.hape.io", category: "Other" },
+  { name: "Renaud Rohlinger", screenshot: "/screenshot/renaudrohlinger.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack03/tree/main/portfolio/renaudrohlinger.com", category: "Other" },
+  { name: "Google Web Showcase", screenshot: "/screenshot/thewebshowcase-withgoogle.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/minisite/thewebshowcase.withgoogle.com", category: "Other" },
+  { name: "Girls Who Code Girls", screenshot: "/screenshot/girlswhocodegirls.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/tools/www.girlswhocodegirls.com", category: "Other" },
+  { name: "QQ PVP 6749", screenshot: "/screenshot/qqpvp6749.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/other/pvp.qq.com", category: "Other" },
+  { name: "Air Force Into the Storm", screenshot: "/screenshot/airforce-intothestorm.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/other/www.airforce.com", category: "Other" },
+  { name: "Fingerspelling", screenshot: "/screenshot/fingerspelling.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/other/fingerspelling.xyz", category: "Other" },
+  { name: "FWA 100 Jam3", screenshot: "/screenshot/fwa100-jam3.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack05/tree/main/portfolio/fwa100.jam3.com", category: "Other" },
+  { name: "Cannes PR Lions News", screenshot: "/screenshot/lionsnews.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack05/tree/main/other/cannesprlions.com", category: "Other" },
+  { name: "2019 Make Me Pulse", screenshot: "/screenshot/2019-makemepulse.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack05/tree/main/other/2019.makemepulse.com", category: "Other" },
+  { name: "Poor Charlie's Almanack", screenshot: "/screenshot/poor-charlies-almanack.jpg", repo: "https://github.com/ezshine/AwesomeSites-poor-charlies-almanack", category: "Other" },
+  { name: "Virtual Cleverfarm", screenshot: "/screenshot/virtual-cleverfarm.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack06/tree/main/other/virtual.cleverfarm.ag", category: "Other" },
+  { name: "Kaizen Make Me Pulse", screenshot: "/screenshot/kaizen-makemepulse.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack06/tree/main/other/kaizen.makemepulse.com", category: "Other" },
+  { name: "Noomo Beat", screenshot: "/screenshot/noomobeat.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack06/tree/main/other/beat.noomoagency.com", category: "Other" },
+  { name: "Lacoste Members Experience", screenshot: "/screenshot/membersexperience-create-lacoste-com.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack06/tree/main/tool/membersexperience-create.lacoste.com", category: "Other" },
+  { name: "Kokuyo", screenshot: "/screenshot/kokuyo-com.jpg", repo: "https://github.com/ezshine/AwesomeSites-Pack06/tree/main/other/www.kokuyo.com", category: "Other" },
+
+  // Mobile Only
+  { name: "Wonderland", screenshot: "/screenshot/wonderland.png", repo: "https://github.com/ezshine/AwesomeSites-Pack02/tree/main/other/wonderland", category: "Mobile Only" },
+  { name: "Ellometay33 Art", screenshot: "/screenshot/ellometay33art.png", repo: "https://github.com/ezshine/AwesomeSites-Pack02/tree/main/room/ellometay33art", category: "Mobile Only" },
+  { name: "Howl's Loewe", screenshot: "/screenshot/hawls-loewe.png", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/game/howls.loewe.com", category: "Mobile Only" },
+  { name: "Fragrance Hermes", screenshot: "/screenshot/fragrance-hermes.png", repo: "https://github.com/ezshine/AwesomeSites-Pack04/tree/main/game/fragrance.hermes.com", category: "Mobile Only" },
+];
