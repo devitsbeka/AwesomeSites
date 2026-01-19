@@ -101,10 +101,8 @@ export default function Home() {
           <div className="sites-grid">
             {filteredSites.map((site, index) => (
               <a
-                key={`${site.name}-${index}`}
-                href={site.repo}
-                target="_blank"
-                rel="noopener noreferrer"
+                key={`${site.slug}-${index}`}
+                href={`/site/${site.slug}/`}
                 className="site-card"
               >
                 <div className="site-card-image">
@@ -114,7 +112,7 @@ export default function Home() {
                     loading="lazy"
                   />
                   <div className="site-card-overlay">
-                    <span className="view-repo-btn">View Repository</span>
+                    <span className="view-repo-btn">{site.url ? 'View Site' : 'View Details'}</span>
                   </div>
                 </div>
                 <div className="site-card-info">
